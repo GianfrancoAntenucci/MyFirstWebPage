@@ -1,86 +1,200 @@
+/* General Styles */
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    text-align: center;
-    margin: 0 auto;
-}
-
-h1 {
-    margin-top:50px;
-}
-
-ul {
-    list-style-type: none;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Navbar */
+nav {
     background-color: rgb(23, 83, 103);
     position: fixed;
     top: 0;
     width: 100%;
+    height: 60px; /* Set a fixed height for the navbar */
+    display: flex;
+    justify-content: center; /* Center menu items horizontally */
+    align-items: center; /* Center menu items vertically */
+    z-index: 1000; /* Ensure the navbar stays on top */
 }
-  
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Even spacing between menu items */
+    margin: 0;
+    padding: 0;
+}
+
 li {
-    float: center;
-    display: inline-flex;
+    margin: 0;
 }
-  
+
 li a {
-    display: block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    font-size: larger;
+    font-size: 18px; /* Adjust the font size */
+    padding: 10px 15px; /* Padding around the menu items */
+    border-radius: 5px; /* Rounded corners for hover effect */
+    transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
 }
-  
+
 li a:hover {
-    background-color: rgb(58, 214, 223);
+    background-color: rgb(58, 214, 223); /* Hover effect background color */
+}
+
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: 50px; /* To avoid overlap with fixed navbar */
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 20px;
+}
+
+.about-content img {
+    margin-bottom: 15px;
+    border-radius: 50%;
 }
 
 #about p {
-    text-align: justify;
+    text-align: justify; /* Centers the text horizontally */
     font-size: large;
     display: block;
-    margin: 3%;
+    margin: 3% auto; /* Centers the block and adds vertical spacing */
+    width: 80%; /* Controls the width of the paragraph */
+    max-width: 800px; /* Optional: sets a max-width for readability */
 }
 
-input[type=text],[type=email] {
-    width: 300px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    text-align: left;
-  }
-
-input[type=tel] {
-    width: 320px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    text-align: left;
+/* Projects Section */
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-textarea {
-    width: 350px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    text-align: left;
-}
-
-input[type=submit] {
-    background-color: rgb(23, 83, 103);
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-size: larger;
-  }
-footer {
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
     text-align: center;
-    margin-top: 10px;
+    max-width: 450px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
     margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 180%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Style the Favourite Contact Method section */
+.contact-method {
+    display: flex;
+    gap: 10px; /* Adds space between the radio buttons */
+    align-items: center; /* Vertically aligns radio buttons and labels */
+    margin-top: 5px; /* Adds some space between the label and radio buttons */
+}
+
+.contact-method input[type="radio"] {
+    margin: 0; /* Removes default margin around radio buttons */
+}
+
+.contact-form input[type="submit"] {
+    background-color: rgb(23, 83, 103);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: rgb(58, 214, 223);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(23, 83, 103);
+    color: white;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    
 }

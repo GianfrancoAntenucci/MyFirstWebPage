@@ -3,86 +3,80 @@
     <head>
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gianfranco's portfolio web page</title>
+    <title>Gianfranco's web page</title>
     <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                  </ul>
-            </nav>
-            <div><h1>Gianfranco's portfolio web page</h1></div>
-        </header>
-        
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-title">
+            <h1>Gianfranco's Web Page</h1>
+        </div>
+    </header>
+    
+    <main>
+        <section id="about" class="flex-container">
+            <h2>About Me</h2>
+            <div class="about-content">
                 <img src="me.jpeg" alt="Picture of myself" width="100" height="100">
-                <p>Hi, I'm Gianfranco, a dedicated Full Stack Software Developer with a passion for continuous learning and problem-solving. My skill set includes HTML, CSS, JavaScript, Python, Bootstrap, SQL, and DBMS. With a background in the hospitality and travel industry, I bring strong communication skills, adaptability, and a customer-focused approach to my work in tech.
+                <p>Hi, I'm Gianfranco, a dedicated Full Stack Software Developer with a passion for continuous learning and problem-solving.
+                    My skill set includes HTML, CSS, JavaScript, Python, Bootstrap, SQL, and DBMS. With a background in the hospitality and travel industry,
+                    I bring strong communication skills, adaptability, and a customer-focused approach to my work in tech.
+                    I transitioned into software development through a Level 4 Full Stack Web Development Bootcamp at Step8Up Academy,
+                    where I gained hands-on experience in building modern, responsive, and user-friendly web applications.
+                    Check out my portfolio to see projects like a refactored Bootcamp website and a multi-page responsive website.
+                    I'm excited to bring my skills and enthusiasm to new challenges in the tech industry.</p>
+            </div>
+        </section>
 
-                    I transitioned into software development through a Level 4 Full Stack Web Development Bootcamp at Step8Up Academy, where I gained hands-on experience in building modern, responsive, and user-friendly web applications. Check out my portfolio to see projects like a personal webpage and a refactored Bootcamp website. I'm excited to bring my skills and enthusiasm to new challenges in the tech industry.
-                    
-                </p>
-            </section>
-            <br>
-            <hr>
-            <section id="projects">
-                <h2>Projects</h2>
-                <div>1. <a href="https://gianfrancoantenucci.github.io/MyFirstWebPage/" target="_blank">Personal Portfolio.</a>
-                    <p>My personal portofolio page.</p>
-                    <a href="https://gianfrancoantenucci.github.io/MyFirstWebPage/" target="_blank"><img src="project1.avif" alt="Project1" id="img1"></a>
+        <section id="projects" class="flex-container">
+            <h2>Projects</h2>
+            <div class="project">
+                <a href="https://gianfrancoantenucci.github.io/BootcampWebsiteCodeRefactor/" target="_blank">
+                    <img src="RefactoredBootcampWebsite.png" alt="Screenshot of Bootcamp Website project">
+                </a>
+                <p>A Bootcamp website page refactored...</p>
+            </div>
+            <div class="project">
+                <a href="https://gianfrancoantenucci.github.io/MultiPageResponsiveWebsite/" target="_blank">
+                    <img src="MultiPageResponsiveWebsite.png" alt="Screenshot of Multi Page Responsive Website project">
+                </a>
+                <p>Multi Page Responsive Website that uses modern layout techniques...</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="tel">Tel:</label>
+                <input type="tel" id="tel" name="tel">
+                <label for="message">Your message:</label>
+                <textarea id="message" name="message"></textarea>
+                <label>Favourite contact method:</label>
+                <div class="contact-method">
+                    <input type="radio" id="email-contact" name="fav_contact" value="Email">
+                    <label for="email-contact">Email</label>
+                    <input type="radio" id="tel-contact" name="fav_contact" value="Tel.">
+                    <label for="tel-contact">Telephone</label>
                 </div>
-                <br>
-                <div>2. <a href="https://gianfrancoantenucci.github.io/BootcampWebsiteCodeRefactor/" target="_blank">Bootcamp Web Page Refactoring.</a>
-                    <p>A Bootcamp website page refactored to modern HTML5 structure and semantic standard.</p>
-                    <a href="https://gianfrancoantenucci.github.io/BootcampWebsiteCodeRefactor/" target="_blank"><img src="project2.avif" alt="Project2" id="img2"></a>
-                </div>
-            </section>
-            <br>
-            <hr>
-            <section id="contact">
-                <h2>Contact</h2>
-                Feel free to contact me at: <a href=”mailto:gianfranco@icloud.com”>gianfranco@icloud.com</a><br>
-                 or at <a href="tel:07816 123456">07816 123456</a>
-                <br>
-                Alternatively fill in the form below and I'll get back to you!
-                
-                    <form>
-                        <br>
-                        <label>Name:</label>
-                        <input type="text">
-                        <br>
-                        <br>
-                        <label>Email:</label>
-                        <input type="email">
-                        <br>
-                        <br>
-                        <label>Tel.</label>
-                        <input type="tel">
-                        <br>
-                        <br>
-                        Your message:
-                        <br>
-                        <textarea></textarea>
-                        <br>
-                        Favourite contact method:
-                        <input type="radio" id="email" name="fav_contact" value="Email">
-                        <label for="email">Email</label>
-                        <input type="radio" id="tel" name="fav_contact" value="Tel.">
-                        <label for="tel">Telephone</label>
-                        <br>
-                        <br>
-                        <input type="submit">
-                    </form>
-                </section>
-        </main>
-        <footer>
-            <h4>&copy; 2025 Gianfranco - Made with ❤ in Berkshire</h4>
-        </footer>
-    </body>
-</html>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h4>&copy; 2025 Gianfranco - Made with ❤ in Berkshire</h4>
+    </footer>
+</body>
